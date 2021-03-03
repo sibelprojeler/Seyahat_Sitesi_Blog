@@ -1,0 +1,18 @@
+﻿@using SeyahatSitesi.Models.Siniflar
+@model List <Blog>
+
+@foreach (var x in Model)
+{
+<div class="right">
+  <div class="bottom-left">
+        <img src="@x.Blogimage" style="width:360px;height:200px;" alt="" />
+    </div>
+    <div class="left-text" style="text-align:justify;">
+        <h4>@x.Baslik</h4>
+        <span class="underline">@x.Tarih.ToString("dd.MM.yyyy")</span>
+        <p>@x.Aciklama.Substring(0,80)</p>
+        <p><a href="/Blog/BlogDetay/@x.ID"><span class="read">Devamını Oku>></span></a></p>
+    </div>
+   
+</div>
+}
